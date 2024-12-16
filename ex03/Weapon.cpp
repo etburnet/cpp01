@@ -6,16 +6,16 @@
 /*   By: eburnet <eburnet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 10:23:43 by eburnet           #+#    #+#             */
-/*   Updated: 2024/12/16 09:38:27 by eburnet          ###   ########.fr       */
+/*   Updated: 2024/12/16 14:58:39 by eburnet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 #include "iostream"
 
-Weapon::Weapon(std::string weap_type)
+Weapon::Weapon(std::string weapon_type)
 {
-	this->_type = weap_type;
+	setType(weapon_type);
 	return ;
 }
 

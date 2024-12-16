@@ -6,16 +6,16 @@
 #    By: eburnet <eburnet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/13 16:13:27 by eburnet           #+#    #+#              #
-#    Updated: 2024/12/16 15:22:29 by eburnet          ###   ########.fr        #
+#    Updated: 2024/12/16 15:24:13 by eburnet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Unnecessary_violence
+NAME = sed_is_for_losers
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp 
 OBJS = $(SRC:.cpp=.o)
-HEADER = Weapon.hpp HumanA.hpp HumanB.hpp
+HEADER = 
 
 %.o: %.cpp $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $@

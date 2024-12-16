@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eburnet <eburnet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/14 10:23:52 by eburnet           #+#    #+#             */
-/*   Updated: 2024/12/16 15:11:17 by eburnet          ###   ########.fr       */
+/*   Created: 2024/12/16 15:23:22 by eburnet           #+#    #+#             */
+/*   Updated: 2024/12/16 15:32:23 by eburnet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
-#include "Weapon.hpp"
-#endif
+#include <fstream>
+#include <iostream>
 
-class HumanA
+int	main(int argc, char* argv[])
 {
-	private:
-		std::string _name;
-		Weapon &_Weapon;
-	public:
-		HumanA(std::string name, Weapon &weapon);
-		~HumanA();
-		void attack(void);
-};
+	std::fstream fs;
+
+	if(argc != 3)
+		return (std::cout << "3 params needed" << std::endl, 1);
+	fs.open(argv[1]);
+}
