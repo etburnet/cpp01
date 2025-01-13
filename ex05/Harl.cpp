@@ -6,7 +6,7 @@
 /*   By: eburnet <eburnet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 14:23:42 by eburnet           #+#    #+#             */
-/*   Updated: 2024/12/17 14:32:52 by eburnet          ###   ########.fr       */
+/*   Updated: 2025/01/13 13:07:50 by eburnet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,14 @@ void Harl::warning(void)
 void Harl::error(void)
 {
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+}
+
+Harl::Harl()
+{
+	return ;
+}
+
+Harl::~Harl()
+{
+	return ;
 }

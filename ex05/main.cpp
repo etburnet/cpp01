@@ -6,24 +6,31 @@
 /*   By: eburnet <eburnet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 14:23:46 by eburnet           #+#    #+#             */
-/*   Updated: 2024/12/17 15:23:33 by eburnet          ###   ########.fr       */
+/*   Updated: 2025/01/13 13:42:21 by eburnet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 #include <iostream>
 
-void Harl::complain(std::string level)
+void Harl::complain(std::string input)
 {
-	
+	void (Harl::* ptrFctTab[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+	for (size_t i = 0; i < 4; i++)
+	{
+		if (input == levels[i])
+			(this->*ptrFctTab[i])();
+	}
 }
 
 int	main()
 {
 	std::string input;
-	Harl *harl;
+	Harl harl;
 	
 	std::cout << "Choose between (DEBUG, INFO, WARNING, ERROR):" << std::endl;
 	std::cin >> input;
-	harl->complain(input);
+	harl.complain(input);
 }
